@@ -1,156 +1,83 @@
 /* PC */
 @media (min-width: 992px) {
-    .overlay-contact {
-        padding-top: 100px;
+    #head {
+        display: none;
     }
 
-    .modal {
-        width: 900px;
-        margin: auto;
-        padding: 32px;
-        background-color: #fff;
-        position: relative;
+    .overlay {
+        z-index: 2;
     }
 
-    .modal-name {
-        font-size: 3rem;
-        margin: 10px 0;
-        letter-spacing: 0.5rem;
-        text-align: center;
-        font-weight: lighter;
-
-    }
-
-    .modal-close {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 16px;
-    }
-
-    .modal-close:hover {
-        background-color: #ccc;
-    }
-
-    .modal-desc {
-        font-size: 1.5rem;
-        margin: 15px 0;
-        text-align: center;
-        font-weight: lighter;
-        color: #757575;
-    }
-
-    .modal-input {
-        padding: 8px;
-        width: 100%;
-    }
-
-    .modal-button {
-        background-color: #f44336;
-        padding: 12px 24px;
-        border: none;
-        color: #fff;
-        margin: 16px 0;
-        font-size: 1.5rem;
-        line-height: 2.2rem;
-        letter-spacing: 0.15rem;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
+    .category {
+        z-index: 1;
     }
 }
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991px) {
-    .category {
-        background-color: #000;
-        color: #fff;
-        height: 84px;
-        width: 100%;
-        left: 0;
+    .modal {
+        width: 600px;
     }
 
-    .category-logo {
+    .category {
+        width: calc(18.5vw + (100vw - 720px)/2 + 7.5px);
+        padding-left: calc((100vw - 720px)/2 + 7.5px);
+    }
+
+    .logo {
         margin-left: calc((100vw - 720px)/2 + 7.5px);
     }
 
-    .category-menu-icon {
-        color: #fff;
-        display: block;
-        font-size: 3rem;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+    .menu-icon {
         right: calc((100vw - 720px)/2 + 7.5px - 16px);
-        padding: 16px;
-    }
-
-    .category-menu,
-    .category-infor {
-        display: none;
-    }
-
-    .home {
-        margin-top: 84px;
-    }
-
-    .overlay-menu {
-        background-color: rgba(0, 0, 0, 0.4);
-        z-index: 2;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
     }
 }
 
 /* Mobile - Ngang */
 @media (min-width: 576px) and (max-width: 767px) {
-    .category {
-        background-color: #000;
-        color: #fff;
-        height: 84px;
-        width: 100%;
-        left: 0;
+    .overlay {
+        padding-top: 50px;
+    }
+    
+    .modal {
+        width: 500px;
     }
 
-    .category-logo {
+    .category {
+        width: 250px;
+        padding-left: calc((100vw - 540px)/2 + 7.5px);
+    }
+
+    .logo {
         margin-left: calc((100vw - 540px)/2 + 7.5px);
     }
 
-    .category-menu,
-    .category-infor {
-        display: none;
-    }
-
-    .home {
-        margin-top: 84px;
+    .menu-icon {
+        right: calc((100vw - 540px)/2 + 7.5px - 16px);
     }
 }
 
 /* Mobile - Dung */
 @media (max-width: 576px) {
-    .category {
-        background-color: #000;
-        color: #fff;
-        height: 84px;
-        width: 100%;
-        left: 0;
+    .overlay {
+        padding-top: 50px;
+    }
+    
+    .modal {
+        width: 350px;
     }
 
-    .category-logo {
+    .category {
+        width: 250px;
+        padding-left: 7.5px;
+    }
+
+    .logo {
         margin-left: 7.5px;
     }
 
-    .category-menu,
-    .category-infor {
-        display: none;
-    }
-
-    .home {
-        margin-top: 84px;
+    .menu-icon {
+        right: 7.5px;
     }
 
     .intro-name {
@@ -162,3 +89,44 @@
     }
 }
 
+
+/* Tablet and Moble */
+@media (max-width:991px) {
+    #head {
+        background-color: #000;
+        color: #fff;
+        position: relative;
+    }
+
+    .category {
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
+    .category-logo {
+        position: relative;
+    }
+
+    .menu-icon {
+        color: #fff;
+        display: block;
+        font-size: 3rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 16px;
+    }
+
+    .category-close-icon {
+        color: #000;
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 16px;
+    }
+}
